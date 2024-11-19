@@ -44,7 +44,7 @@ def generate_and_store_data(db_ops: DatabaseOperations, cities_df: pd.DataFrame,
 
 def get_surveillance_data(start_date,
                          end_date):
-    """Retrieve merged surveillance data."""
+    """Retrieve and merged surveillance data."""
     db_ops = DatabaseOperations(get_database_url())
     return db_ops.get_merged_data(start_date, end_date)
 
